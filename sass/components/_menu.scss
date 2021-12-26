@@ -1,0 +1,141 @@
+.menu-button {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.close-menu-button {
+  display: block;
+  margin-top: 10px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu-button__icon {
+  fill: $logo-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  background-color: $main-background-color;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.mobile-menu--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav__item {
+  margin-left: 25px;
+  margin-bottom: 32px;
+}
+
+.mobile-nav {
+  @extend %list;
+}
+
+.mobile-nav__link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+  line-height: 1.17;
+  color: $main-text-color;
+}
+
+.mobile-nav__link--current {
+  color: $accent-color;
+}
+
+.mobile-contacts {
+  margin-top: auto;
+  margin-bottom: -32px;
+  @extend %list;
+}
+
+.mobile-contacts__item {
+  margin-bottom: 32px;
+  margin-left: 25px;
+}
+
+.mobile-contacts__link {
+  @extend %link;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.17;
+}
+
+.mobile-contacts__link--tel {
+  font-size: 34px;
+  color: $accent-color;
+}
+
+.mobile-contacts__link--email {
+  font-size: 24px;
+  color: $secondary-text-color;
+}
+
+.mobile-networks {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  margin-left: -10px;
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
+.mobile-networks__item {
+  margin-left: 10px;
+}
+
+.mobile-networks__item + .mobile-networks__item::before {
+  content: "";
+  width: 10px;
+  height: 22px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+}
+
+.mobile-networks__link {
+  @extend %link;
+  color: $accent-color;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}

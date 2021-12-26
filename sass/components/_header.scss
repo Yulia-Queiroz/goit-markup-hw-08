@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid $header-color;
   background-color: $main-background-color;
 }
@@ -13,28 +14,6 @@
 .main-nav {
   display: flex;
   align-items: center;
-}
-
-.header-button {
-  display: block;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  margin-left: auto;
-}
-
-.header-button__icon {
-  fill: $logo-color;
-
-  &:hover,
-  &:focus {
-    fill: $accent-color;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }
 
 .site-nav {
