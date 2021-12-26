@@ -143,6 +143,10 @@
   .project-card__link:focus & {
     transform: translateY(0);
   }
+
+  @media screen and (max-width: 479px) {
+    font-size: 14px;
+  }
 }
 
 .project-card__border {

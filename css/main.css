@@ -353,6 +353,12 @@
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-networks__link {
+    font-size: 16px;
+  }
+}
+
 body {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
@@ -1611,6 +1617,12 @@ body {
 .project-card__link:focus .project-card__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 479px) {
+  .project-card__overlay {
+    font-size: 14px;
+  }
 }
 
 .project-card__border {
