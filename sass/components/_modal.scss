@@ -78,6 +78,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+  width: calc(100% - 30px);
 
   @media screen and (max-width: 1199px) {
     max-width: 370px;
