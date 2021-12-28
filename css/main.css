@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.site-nav__link, .header-contacts__link, .mobile-nav__link, .mobile-contacts__link, .mobile-networks__link, .logo, .social-list__link, .client-card__link, .footer-contacts__info, .join-list__link, .project-card__link {
+.site-nav__link, .header-contacts__link, .mobile-nav__link, .mobile-contacts__link, .mobile-networks, .mobile-networks__link, .logo, .social-list__link, .client-card__link, .footer-contacts__info, .join-list__link, .project-card__link {
   text-decoration: none;
 }
 
@@ -325,21 +325,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: -10px;
+  margin-right: -10px;
+  margin-left: 25px;
   margin-top: 64px;
   margin-bottom: 48px;
 }
 
 .mobile-networks__item {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mobile-networks__item + .mobile-networks__item::before {
   content: "";
-  width: 10px;
+  width: 1px;
   height: 22px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
@@ -571,16 +569,21 @@ body {
 }
 
 .advantage-list__title {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
-  margin-right: auto;
-  margin-left: auto;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .advantage-list__title {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
 }
 
 .advantage-list__descr {
@@ -670,7 +673,7 @@ body {
 
 .team__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
@@ -681,6 +684,7 @@ body {
 @media screen and (min-width: 1200px) {
   .team__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -805,12 +809,19 @@ body {
 
 .clients__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
